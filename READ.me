@@ -1,0 +1,35 @@
+a. Send Message
+
+Method: POST
+URL: localhost:3000/messages/send
+Body Type: JSON (application/json)
+Body Content: json
+
+{
+  "senderId": "123",
+  "receiverId": "456",
+  "content": "Hello, this is a test message!"
+}
+
+Click 'Send' to execute the request.
+
+b. Mark Message as Delivered
+
+Method: PATCH
+URL: localhost:3000/messages/delivered/{messageId} (Replace {messageId} with the actual ID of the message)
+No body required for this request.
+Click 'Send'.
+
+c. Mark Message as Read
+
+Method: PATCH
+URL: localhost:3000/messages/read/{messageId} (Replace {messageId} with the actual ID of the message)
+No body required for this request.
+Click 'Send'.
+
+d. Receive Messages
+
+Method: GET
+URL: localhost:3000/messages/receive/{receiverId} (Replace {receiverId} with the actual ID of the receiver)
+No body required for this request.
+Click 'Send'.

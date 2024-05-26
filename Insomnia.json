@@ -1,0 +1,228 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2024-05-26T19:50:53.729Z",
+    "__export_source": "insomnia.desktop.app:v9.2.0",
+    "resources": [
+        {
+            "_id": "req_7d785f6f465b45b6ab0fa5e26f9ca5bc",
+            "parentId": "fld_602fff184a2c496ebde43e86a30bd306",
+            "modified": 1716752922583,
+            "created": 1716751799623,
+            "url": "{{path}}:{{port}}/{{endpoints.receive}}/456",
+            "name": "Messages-Get",
+            "description": "",
+            "method": "GET",
+            "body": {},
+            "preRequestScript": "",
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/9.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1716751799623,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "fld_602fff184a2c496ebde43e86a30bd306",
+            "parentId": "wrk_bab5a5761a2a4085abf09a45e328ed80",
+            "modified": 1716752927648,
+            "created": 1716748672483,
+            "name": "WhatsApp",
+            "description": "",
+            "environment": {
+                "path": "localhost",
+                "port": 3000,
+                "endpoints": {
+                    "send": "messages/send",
+                    "derived": "messages/delivered",
+                    "read": "messages/read",
+                    "receive": "messages/receive"
+                }
+            },
+            "environmentPropertyOrder": {
+                "&": [
+                    "path",
+                    "port",
+                    "endpoints"
+                ],
+                "&~|endpoints": [
+                    "send",
+                    "derived",
+                    "read",
+                    "receive"
+                ]
+            },
+            "metaSortKey": -1716748672483,
+            "_type": "request_group"
+        },
+        {
+            "_id": "wrk_bab5a5761a2a4085abf09a45e328ed80",
+            "parentId": null,
+            "modified": 1716750201707,
+            "created": 1705346270759,
+            "name": "Insomnia",
+            "description": "",
+            "scope": "collection",
+            "_type": "workspace"
+        },
+        {
+            "_id": "req_3d77309a35014c9e8922b2c98b024568",
+            "parentId": "fld_602fff184a2c496ebde43e86a30bd306",
+            "modified": 1716752881507,
+            "created": 1716751758793,
+            "url": "{{path}}:{{port}}/{{endpoints.read}}/665381588aac2a3dd53f1ef9",
+            "name": "Messages-Read",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "preRequestScript": "",
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/9.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1716751758793,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_0035cda50050498990d55927d1e51ff5",
+            "parentId": "fld_602fff184a2c496ebde43e86a30bd306",
+            "modified": 1716752894789,
+            "created": 1716748908474,
+            "url": "{{path}}:{{port}}/{{endpoints.derived}}/665381588aac2a3dd53f1ef9",
+            "name": "Messages-Derived",
+            "description": "",
+            "method": "PATCH",
+            "body": {},
+            "preRequestScript": "",
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/9.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1716748908474,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "req_3ba1fb1c6c4e4874ac140dab6941932a",
+            "parentId": "fld_602fff184a2c496ebde43e86a30bd306",
+            "modified": 1716752957663,
+            "created": 1716748513865,
+            "url": "{{path}}:{{port}}/{{endpoints.send}}",
+            "name": "Messages-Create",
+            "description": "",
+            "method": "POST",
+            "body": {
+                "mimeType": "application/json",
+                "text": "{\n  \"senderId\": \"123\",\n  \"receiverId\": \"456\",\n  \"content\": \"Hello, this is a test message!\"\n}"
+            },
+            "preRequestScript": "",
+            "parameters": [],
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "insomnia/9.2.0"
+                }
+            ],
+            "authentication": {},
+            "metaSortKey": -1716748703138,
+            "isPrivate": false,
+            "pathParameters": [],
+            "settingStoreCookies": true,
+            "settingSendCookies": true,
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingRebuildPath": true,
+            "settingFollowRedirects": "global",
+            "_type": "request"
+        },
+        {
+            "_id": "env_f9bd95eedd6589a8c68252ed021aca020ee0c7bc",
+            "parentId": "wrk_bab5a5761a2a4085abf09a45e328ed80",
+            "modified": 1716752046547,
+            "created": 1705346270762,
+            "name": "Base Environment",
+            "data": {},
+            "dataPropertyOrder": {},
+            "color": null,
+            "isPrivate": false,
+            "metaSortKey": 1705346270762,
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_f9bd95eedd6589a8c68252ed021aca020ee0c7bc",
+            "parentId": "wrk_bab5a5761a2a4085abf09a45e328ed80",
+            "modified": 1705711851853,
+            "created": 1705346270767,
+            "name": "Default Jar",
+            "cookies": [
+                {
+                    "key": "XSRF-TOKEN",
+                    "value": "eyJpdiI6ImZZdVROOXNtam53enlCK1lsMXNneFE9PSIsInZhbHVlIjoiSzFLTGlELzNXZ0wwY2RtSWtrQWNOMHF3NHlWQUEvcDlpekJwcHhENExaUXUydnh6OGFhUnFHS1gvbFJ1VzIvODBmTkowYU5GcFBRYW1JZ0NGOTd3U1JkVlRpY093YUhadHg2ajg0OVdadVZZYllab3BXQ1UzZll4dmpqUTFJZDIiLCJtYWMiOiI0MDcyN2I3MGUxM2JmNTI3ZTYzYjYxY2NmODg5NTIyOGRmMTc2MTRkMjI5NTI5ZDNhMmQzNDdmNDAxZDc0NmY0IiwidGFnIjoiIn0%3D",
+                    "expires": "2024-01-20T02:50:51.000Z",
+                    "maxAge": 7200,
+                    "domain": "localhost",
+                    "path": "/",
+                    "hostOnly": true,
+                    "creation": "2024-01-20T00:35:37.922Z",
+                    "lastAccessed": "2024-01-20T00:50:51.853Z",
+                    "sameSite": "lax",
+                    "id": "8bd0125d-8151-44c9-b36f-17af42232192"
+                },
+                {
+                    "key": "laravel_session",
+                    "value": "eyJpdiI6IlVkK0J4Z3ZGNWo0NGlVR3hZdm41K0E9PSIsInZhbHVlIjoidWRIRTliMXNjZUQ3UHpoUTZVSFpCSUFqZUpodlRBa1REcFJtS0F3Y1N5ZkFCYXRoMGVSU0ZsaHVwcUdOZTFsaEdXNEdBSCt1eXgzMzlWYUVSTUVWcXNYRjJ4R0RCTXRpWFRKUW1Tb25CUnF2ZFVFQW1ONnR0N2JIZVcwdC85ZVciLCJtYWMiOiI1MmE4MmQzNzZlODRkMGJkZjFlZmRkNTFkMzhjNmE1ODllOGUyZDdiOGYwOTRhYTk1ZGIxNmZhMjEwYzAxNDYyIiwidGFnIjoiIn0%3D",
+                    "expires": "2024-01-20T02:50:51.000Z",
+                    "maxAge": 7200,
+                    "domain": "localhost",
+                    "path": "/",
+                    "httpOnly": true,
+                    "hostOnly": true,
+                    "creation": "2024-01-20T00:35:37.924Z",
+                    "lastAccessed": "2024-01-20T00:50:51.853Z",
+                    "sameSite": "lax",
+                    "id": "fef65646-1c8a-425c-adf7-bcdd8bf6bd63"
+                }
+            ],
+            "_type": "cookie_jar"
+        }
+    ]
+}
